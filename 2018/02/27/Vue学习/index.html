@@ -7,18 +7,18 @@
   
   <title>Vue学习之全家桶实践 | LouieMain个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。">
+  <meta name="description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。  Vue安装方式Vue官方介绍：https://cn.vuejs.org/v2/guide/installation.html 1.NPM12# 最新稳定版$ npm install vue 2.命令行工具 (CLI)12345678# 全局安装 vu">
 <meta name="keywords" content="Vue.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习之全家桶实践">
 <meta property="og:url" content="http://yoursite.com/2018/02/27/Vue学习/index.html">
 <meta property="og:site_name" content="LouieMain个人博客">
-<meta property="og:description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。">
+<meta property="og:description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。  Vue安装方式Vue官方介绍：https://cn.vuejs.org/v2/guide/installation.html 1.NPM12# 最新稳定版$ npm install vue 2.命令行工具 (CLI)12345678# 全局安装 vu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-27T07:12:54.815Z">
+<meta property="og:updated_time" content="2018-02-28T00:29:05.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习之全家桶实践">
-<meta name="twitter:description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。">
+<meta name="twitter:description" content="学习内容来自http://blog.csdn.net/creabine/article/details/78895360感谢“Creabine”。  Vue安装方式Vue官方介绍：https://cn.vuejs.org/v2/guide/installation.html 1.NPM12# 最新稳定版$ npm install vue 2.命令行工具 (CLI)12345678# 全局安装 vu">
   
     <link rel="alternate" href="/atom.xml" title="LouieMain个人博客" type="application/atom+xml">
   
@@ -98,11 +98,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>学习内容来自<a href="http://blog.csdn.net/creabine/article/details/78895360" target="_blank" rel="noopener">http://blog.csdn.net/creabine/article/details/78895360</a><br>感谢“Creabine”。</p>
-
+<hr>
+<h2 id="Vue安装方式"><a href="#Vue安装方式" class="headerlink" title="Vue安装方式"></a>Vue安装方式</h2><p>Vue官方介绍：<a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/installation.html</a></p>
+<h3 id="1-NPM"><a href="#1-NPM" class="headerlink" title="1.NPM"></a>1.NPM</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最新稳定版</span></span><br><span class="line">$ npm install vue</span><br></pre></td></tr></table></figure>
+<h3 id="2-命令行工具-CLI"><a href="#2-命令行工具-CLI" class="headerlink" title="2.命令行工具 (CLI)"></a>2.命令行工具 (CLI)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装 vue-cli</span></span><br><span class="line">$ npm install --global vue-cli</span><br><span class="line"><span class="comment"># 创建一个基于 webpack 模板的新项目</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"><span class="comment"># 安装依赖，走你</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<h2 id="Vue项目结构"><a href="#Vue项目结构" class="headerlink" title="Vue项目结构:"></a>Vue项目结构:</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── build/                      <span class="comment"># webpack 配置文件</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── config/</span><br><span class="line">│   ├── index.js                <span class="comment"># 主项目配置文件</span></span><br><span class="line">│   └── ...</span><br><span class="line">├── src/                          <span class="comment"># 源代码</span></span><br><span class="line">│   ├── main.js                 <span class="comment"># app入口文件</span></span><br><span class="line">│   ├── App.vue                 <span class="comment"># 主app组件</span></span><br><span class="line">│   ├── components/             <span class="comment"># 通用组件</span></span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── assets/                 <span class="comment"># 模块资源 (会被webpack处理)</span></span><br><span class="line">│       └── ...</span><br><span class="line">├── static/                     <span class="comment"># 纯静态资源 (直接复制的静态资源)</span></span><br><span class="line">├── <span class="built_in">test</span>/                         <span class="comment"># 测试相关</span></span><br><span class="line">│       └── ...                </span><br><span class="line">├── .babelrc                    <span class="comment"># babel 配置，ES6/7语法转换</span></span><br><span class="line">├── .editorconfig               <span class="comment"># 文件换行，空格，tab和类似的设置，方便编辑器读取</span></span><br><span class="line">├── .eslintrc.js                <span class="comment"># eslint 配置，严格的代码规范。</span></span><br><span class="line">├── .eslintignore               <span class="comment"># eslint ignore 配置规则，哪些文件不需要通过eslint校验</span></span><br><span class="line">├── .gitignore                  <span class="comment"># git提交时忽略哪些文件</span></span><br><span class="line">├── .postcssrc.js               <span class="comment"># postcss 配置，他也是一种css预处理器</span></span><br><span class="line">├── index.html                  <span class="comment"># index.html 入口html</span></span><br><span class="line">├── package.json                <span class="comment"># 项目信息以及依赖</span></span><br><span class="line">└── README.md                   <span class="comment"># Default README file</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cje5biktv0001dwvih5l637g8" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cje5bqipe0004dgviiijus57w" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>

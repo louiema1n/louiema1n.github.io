@@ -5,18 +5,20 @@
   
 
   
-  <title>标签: Vue.js | LouieMain个人博客</title>
+  <title>springboot支持跨域设置 | LouieMain个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="louiemain">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LouieMain个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/Vue-js/index.html">
+  <meta name="description" content="解决跨域问题只用在Controller类上添加一个“@CrossOrigin“注解就可以实现对当前controller 的跨域 访问了，当然这个标签也可以加到方法上。1234567891011121314@RequestMapping(value = &quot;/users&quot;)@RestController@CrossOriginpublic class UserController &amp;#123;">
+<meta name="keywords" content="springboot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot支持跨域设置">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/springboot支持跨域设置/index.html">
 <meta property="og:site_name" content="LouieMain个人博客">
-<meta property="og:description" content="louiemain">
+<meta property="og:description" content="解决跨域问题只用在Controller类上添加一个“@CrossOrigin“注解就可以实现对当前controller 的跨域 访问了，当然这个标签也可以加到方法上。1234567891011121314@RequestMapping(value = &quot;/users&quot;)@RestController@CrossOriginpublic class UserController &amp;#123;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-28T07:52:30.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LouieMain个人博客">
-<meta name="twitter:description" content="louiemain">
+<meta name="twitter:title" content="springboot支持跨域设置">
+<meta name="twitter:description" content="解决跨域问题只用在Controller类上添加一个“@CrossOrigin“注解就可以实现对当前controller 的跨域 访问了，当然这个标签也可以加到方法上。1234567891011121314@RequestMapping(value = &quot;/users&quot;)@RestController@CrossOriginpublic class UserController &amp;#123;">
   
     <link rel="alternate" href="/atom.xml" title="LouieMain个人博客" type="application/atom+xml">
   
@@ -69,40 +71,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/02/27/Vue学习/" class="archive-article-date">
-  <time datetime="2018-02-27T07:06:16.000Z" itemprop="datePublished">2月 27</time>
+        <section id="main"><article id="post-springboot支持跨域设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/28/springboot支持跨域设置/" class="article-date">
+  <time datetime="2018-02-28T07:51:13.000Z" itemprop="datePublished">2018-02-28</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/27/Vue学习/">Vue学习之路</a>
+    <h1 class="article-title" itemprop="name">
+      springboot支持跨域设置
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解决跨域问题"><a href="#解决跨域问题" class="headerlink" title="解决跨域问题"></a>解决跨域问题</h2><p>只用在Controller类上添加一个“@CrossOrigin“注解就可以实现对当前controller 的跨域 访问了，当然这个标签也可以加到方法上。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(value = <span class="string">"/users"</span>)</span><br><span class="line">@RestController</span><br><span class="line">@CrossOrigin</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserService userService;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(method = RequestMethod.POST)</span><br><span class="line">    @CrossOrigin</span><br><span class="line">    public User create(@RequestBody @Validated User user) &#123;</span><br><span class="line">        <span class="built_in">return</span> userService.create(user);</span><br><span class="line">    &#125;</span><br><span class="line">   ｝</span><br></pre></td></tr></table></figure></p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/28/springboot支持跨域设置/" data-id="cje81v7wt000b8wviaio3tuv4" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/01/数组相关/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;-Newer</strong>
+      <div class="article-nav-title">
+        
+          数组相关
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/27/Vue学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older-&gt;</strong>
+      <div class="article-nav-title">Vue学习之路</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         

@@ -71,6 +71,112 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-数组相关" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/01/数组相关/" class="article-date">
+  <time datetime="2018-03-01T05:06:56.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/01/数组相关/">数组相关</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="对象数组查询索引值"><a href="#对象数组查询索引值" class="headerlink" title="对象数组查询索引值"></a>对象数组查询索引值</h2><pre><code class="bash">var array1 = [
+          {
+            title: <span class="string">'姓名'</span>,
+            key: <span class="string">'name'</span>
+          },
+          {
+            title: <span class="string">'年龄'</span>,
+            key: <span class="string">'age'</span>
+          },
+          {
+            title: <span class="string">'地址'</span>,
+            key: <span class="string">'address'</span>
+          }
+        ];
+
+<span class="keyword">function</span> findFirstLargeNumber(element) {
+  <span class="built_in">return</span> element.title == <span class="string">'姓名'</span>;
+}
+
+array1.findIndex(findFirstLargeNumber);
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/01/数组相关/" data-id="cje81v7wo000a8wvijb0ix1lq" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组/">数组</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-springboot支持跨域设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/28/springboot支持跨域设置/" class="article-date">
+  <time datetime="2018-02-28T07:51:13.000Z" itemprop="datePublished">2018-02-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/28/springboot支持跨域设置/">springboot支持跨域设置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解决跨域问题"><a href="#解决跨域问题" class="headerlink" title="解决跨域问题"></a>解决跨域问题</h2><p>只用在Controller类上添加一个“@CrossOrigin“注解就可以实现对当前controller 的跨域 访问了，当然这个标签也可以加到方法上。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@RequestMapping(value = <span class="string">"/users"</span>)</span><br><span class="line">@RestController</span><br><span class="line">@CrossOrigin</span><br><span class="line">public class UserController &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    private UserService userService;</span><br><span class="line"></span><br><span class="line">    @RequestMapping(method = RequestMethod.POST)</span><br><span class="line">    @CrossOrigin</span><br><span class="line">    public User create(@RequestBody @Validated User user) &#123;</span><br><span class="line">        <span class="built_in">return</span> userService.create(user);</span><br><span class="line">    &#125;</span><br><span class="line">   ｝</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/28/springboot支持跨域设置/" data-id="cje81v7wt000b8wviaio3tuv4" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Vue学习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/02/27/Vue学习/" class="article-date">
@@ -111,11 +217,17 @@
 <h2 id="引入vue-router"><a href="#引入vue-router" class="headerlink" title="引入vue-router"></a>引入vue-router</h2><p>vue-router官方介绍：<a href="https://router.vuejs.org/zh-cn/installation.html" target="_blank" rel="noopener">https://router.vuejs.org/zh-cn/installation.html</a></p>
 <h3 id="1-NPM-安装-1"><a href="#1-NPM-安装-1" class="headerlink" title="1.NPM 安装"></a>1.NPM 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router</span><br></pre></td></tr></table></figure>
 <h3 id="2-引入"><a href="#2-引入" class="headerlink" title="2.引入"></a>2.引入</h3><p>一般在 webpack 入口页面 main.js 中如下配置：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import VueRouter from <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="引入axios"><a href="#引入axios" class="headerlink" title="引入axios"></a>引入axios</h2><p>axios中文介绍：<a href="https://www.kancloud.cn/yunye/axios/234845" target="_blank" rel="noopener">https://www.kancloud.cn/yunye/axios/234845</a></p>
+<h3 id="1-NPM-安装-2"><a href="#1-NPM-安装-2" class="headerlink" title="1.NPM 安装"></a>1.NPM 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
+<h3 id="2-引入-1"><a href="#2-引入-1" class="headerlink" title="2.引入"></a>2.引入</h3><p>在 main.js 中引入 axios<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 引入 axios</span><br><span class="line">import axios from <span class="string">'axios'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h3><p>将axios写入Vue的原型链作为Vue的属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 设置axios请求的默认host</span><br><span class="line">axios.defaults.baseURL = <span class="string">"https://www.ifilm.ltd/api/"</span></span><br><span class="line">// 将axios绑定给vue成为一个属性</span><br><span class="line">Vue.prototype.<span class="variable">$http</span> = axios</span><br></pre></td></tr></table></figure></p>
+<p>在其他组件中使用axios<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.<span class="variable">$http</span>.get(<span class="string">'路由'</span>).<span class="keyword">then</span>(response =&gt; &#123;</span><br><span class="line">        // todo something</span><br><span class="line">      &#125;).catch(<span class="keyword">function</span> (error) &#123;</span><br><span class="line">    console.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cje6o5d2100016cvizkmk50rb" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cje81v7vy00018wvi61xp9ao3" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
@@ -158,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/26/Hexo博客编写说明/" data-id="cje6o5d1l00006cvicagc6z4k" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/26/Hexo博客编写说明/" data-id="cje81v7vn00008wviivbku50w" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li></ul>
@@ -197,7 +309,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/26/hello-world/" data-id="cje6o5d2w000a6cvir3bk4lsh" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/26/hello-world/" data-id="cje81v7xm000i8wvi68xm8hij" class="article-share-link">分享</a>
       
       
     </footer>
@@ -227,7 +339,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li></ul>
     </div>
   </div>
 
@@ -237,7 +349,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo说明/" style="font-size: 10px;">Hexo说明</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a>
+      <a href="/tags/Hexo说明/" style="font-size: 10px;">Hexo说明</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a>
     </div>
   </div>
 
@@ -246,7 +358,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li></ul>
     </div>
   </div>
 
@@ -257,6 +369,14 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/03/01/数组相关/">数组相关</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/28/springboot支持跨域设置/">springboot支持跨域设置</a>
+          </li>
         
           <li>
             <a href="/2018/02/27/Vue学习/">Vue学习之路</a>

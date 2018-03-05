@@ -71,6 +71,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-IntelliJ IDEA JAVA类和方法注释配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/05/IntelliJ IDEA JAVA类和方法注释配置/" class="article-date">
+  <time datetime="2018-03-05T00:26:02.000Z" itemprop="datePublished">2018-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/05/IntelliJ IDEA JAVA类和方法注释配置/">IntelliJ IDEA JAVA类和方法注释配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>学习资源来源于：<a href="http://blog.csdn.net/qq_34581118/article/details/78409782" target="_blank" rel="noopener">http://blog.csdn.net/qq_34581118/article/details/78409782</a></p>
+<h2 id="生成类注释"><a href="#生成类注释" class="headerlink" title="生成类注释"></a>生成类注释</h2><p>打开Preferences<br>Editor -&gt; File and Code Templates -&gt; Files -&gt; Class </p>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* @program: <span class="variable">$&#123;PROJECT_NAME&#125;</span></span><br><span class="line">*</span><br><span class="line">* @description: <span class="variable">$&#123;description&#125;</span></span><br><span class="line">*</span><br><span class="line">* @author: Mr.Wang</span><br><span class="line">*</span><br><span class="line">* @create: <span class="variable">$&#123;YEAR&#125;</span>-<span class="variable">$&#123;MONTH&#125;</span>-<span class="variable">$&#123;DAY&#125;</span> <span class="variable">$&#123;HOUR&#125;</span>:<span class="variable">$&#123;MINUTE&#125;</span></span><br><span class="line">**/</span><br></pre></td></tr></table></figure>
+<h2 id="生成方法注释"><a href="#生成方法注释" class="headerlink" title="生成方法注释"></a>生成方法注释</h2><p>打开Preferences<br>Editor -&gt; Live Templates -&gt; 点击右边加号为自己添加一个Templates Group -&gt; 然后选中自己的Group再次点击加号添加Live Templates<br>然后设置自己喜欢的快捷键 在Abbreviation里面 记得在Applicable in 里面勾选,起码也要勾选class<br>然后在Edit variables里面添加参数和返回值的自动取值<br>Expression里面选择就是了<br>然后再你的方法上面直接输入/ + 你设置的Abbreviation快捷键 + tab键就直接生成了 （我设置的是/+ a + tab<br>里面的参数和返回值都是根据你在Edit variables里面添加的自动生成的，</p>
+<h3 id="模板-1"><a href="#模板-1" class="headerlink" title="模板"></a>模板</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">注意第一行没有/，只有<span class="string">'**'</span></span><br><span class="line">** </span><br><span class="line"> * @Description: <span class="variable">$description</span>$ </span><br><span class="line"> * @Author: <span class="variable">$author</span>$ </span><br><span class="line"> * @Date: <span class="variable">$date</span>$ <span class="variable">$time</span>$ </span><br><span class="line"><span class="variable">$params</span>$ </span><br><span class="line"> * @<span class="built_in">return</span>: <span class="variable">$returns</span>$ </span><br><span class="line"> */ </span><br><span class="line"> </span><br><span class="line"> <span class="variable">$params</span>$参数为：groovyScript(<span class="string">"def result=''; def params=\"<span class="variable">$&#123;_1&#125;</span>\".replaceAll('[\\\\[|\\\\]|\\\\s]', '').split(',').toList(); for(i = 0; i &lt; params.size(); i++) &#123;result+=' * @param ' + params[i] + ((i &lt; params.size() - 1) ? ' \\n' : '')&#125;; return result"</span>, methodParameters())</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/05/IntelliJ IDEA JAVA类和方法注释配置/" data-id="cjedjcy1t0001n0vis69flxmt" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具类学习/">工具类学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-数组相关" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/01/数组相关/" class="article-date">
@@ -122,7 +168,7 @@ array1.findIndex(findFirstLargeNumber);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/01/数组相关/" data-id="cje81v7wo000a8wvijb0ix1lq" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/03/01/数组相关/" data-id="cjedjcy3z000an0vi8fcp7hac" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组/">数组</a></li></ul>
@@ -165,7 +211,7 @@ array1.findIndex(findFirstLargeNumber);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/28/springboot支持跨域设置/" data-id="cje81v7wt000b8wviaio3tuv4" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/28/springboot支持跨域设置/" data-id="cjedjcy4f000bn0viiogz7n75" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springboot/">springboot</a></li></ul>
@@ -227,7 +273,7 @@ array1.findIndex(findFirstLargeNumber);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cje81v7vy00018wvi61xp9ao3" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/27/Vue学习/" data-id="cjedjcy4f000dn0vivcduyw5x" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue-js/">Vue.js</a></li></ul>
@@ -270,7 +316,7 @@ array1.findIndex(findFirstLargeNumber);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/26/Hexo博客编写说明/" data-id="cje81v7vn00008wviivbku50w" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/26/Hexo博客编写说明/" data-id="cjedjcy1d0000n0viehk6pttc" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li></ul>
@@ -309,7 +355,7 @@ array1.findIndex(findFirstLargeNumber);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/26/hello-world/" data-id="cje81v7xm000i8wvi68xm8hij" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/02/26/hello-world/" data-id="cjedjcy4f000en0vijvgx1v3z" class="article-share-link">分享</a>
       
       
     </footer>
@@ -339,7 +385,7 @@ array1.findIndex(findFirstLargeNumber);
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo说明/">Hexo说明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue-js/">Vue.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/springboot/">springboot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具类学习/">工具类学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a></li></ul>
     </div>
   </div>
 
@@ -349,7 +395,7 @@ array1.findIndex(findFirstLargeNumber);
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo说明/" style="font-size: 10px;">Hexo说明</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a>
+      <a href="/tags/Hexo说明/" style="font-size: 10px;">Hexo说明</a> <a href="/tags/Vue-js/" style="font-size: 10px;">Vue.js</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/工具类学习/" style="font-size: 10px;">工具类学习</a> <a href="/tags/数组/" style="font-size: 10px;">数组</a>
     </div>
   </div>
 
@@ -371,6 +417,10 @@ array1.findIndex(findFirstLargeNumber);
       <ul>
         
           <li>
+            <a href="/2018/03/05/IntelliJ IDEA JAVA类和方法注释配置/">IntelliJ IDEA JAVA类和方法注释配置</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/01/数组相关/">数组相关</a>
           </li>
         
@@ -384,10 +434,6 @@ array1.findIndex(findFirstLargeNumber);
         
           <li>
             <a href="/2018/02/26/Hexo博客编写说明/">Hexo博客编写说明</a>
-          </li>
-        
-          <li>
-            <a href="/2018/02/26/hello-world/">个人博客</a>
           </li>
         
       </ul>
